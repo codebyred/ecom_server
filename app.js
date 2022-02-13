@@ -7,7 +7,7 @@ const app = express();
 //initializing port
 const port = 3000;
 //for serving static files
-app.use(express.static('public'))
+app.use(express.static('./api/public'))
 //allows cors
 app.use(cors());
 //parses json

@@ -14,7 +14,7 @@ get.addEventListener("click",async()=>{
     tbody.innerHTML = "";
 
     //get data from api
-    let results = await getData('http://localhost:3000/api/employee_info');
+    let results = await getData('http://localhost:3000/api/employee');
 
     //loop through elements and create rows
     results.forEach(element => {       
@@ -33,7 +33,7 @@ post.addEventListener("click",async()=>{
     data.emp_id = emp_id;
     data.first_name = first_name;
     data.last_name = last_name;
-    await postData('http://localhost:3000/api/add_employee',data);
+    await postData('http://localhost:3000/api/employee',data);
 })
 
 
