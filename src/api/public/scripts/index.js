@@ -1,6 +1,6 @@
 //importing modules
-import {create_rows} from "./scripts/rows.js";
-import {getData,postData} from "./scripts/api_action.js";
+import {create_rows} from "./rows.js";
+import {getData,postData} from "./api_action.js";
 
 //buttons
 const get = document.querySelector("#get");
@@ -14,7 +14,7 @@ get.addEventListener("click",async()=>{
     tbody.innerHTML = "";
 
     //get data from api
-    let results = await getData('http://localhost:3000/api/employee');
+    let results = await getData('http://localhost:5000/api/employee');
 
     //loop through elements and create rows
     results.forEach(element => {       
@@ -33,7 +33,7 @@ post.addEventListener("click",async()=>{
     data.emp_id = emp_id;
     data.first_name = first_name;
     data.last_name = last_name;
-    await postData('http://localhost:3000/api/employee',data);
+    await postData('http://localhost:5000/api/employee',data);
 })
 
 

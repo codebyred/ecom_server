@@ -4,12 +4,12 @@ import {
     update_employee_info,delete_employee_info
 } from '../controllers/employeeController.js';
 
-const router = express.Router();
+const employee_router = express.Router();
 
-router
+employee_router
 .get('/',get_employee_info)
 .post('/',post_employee_info)
 .put('/:id',update_employee_info)
 .delete('/:id',delete_employee_info)
 
-export default router;
+export {employee_router};
